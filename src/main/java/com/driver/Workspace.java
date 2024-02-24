@@ -17,16 +17,17 @@ public class Workspace extends Gmail {
     }
 
     public int findMaxMeetings(){
-        int maxMeetings = 0;
-        for (Meeting meeting : calendar) {
-            int count = 0;
-            for (Meeting other : calendar) {
-                if (meeting != other && !meeting.overlaps(other)) {
-                    count++;
-                }
+    int maxMeetings = 0;
+    for (Meeting meeting : calendar) {
+        int count = 0;
+        for (Meeting other : calendar) {
+            if (meeting != other && !meeting.overlaps(other)) {
+                count++;
             }
-            maxMeetings = Math.max(maxMeetings, count);
         }
-        return maxMeetings;
+        maxMeetings = Math.max(maxMeetings, count);
     }
+    return maxMeetings;
+    }
+
 }
