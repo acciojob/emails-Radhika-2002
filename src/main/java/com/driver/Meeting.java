@@ -10,8 +10,11 @@ public class Meeting {
         this.startTime = startTime;
         this.endTime = endTime;
     }
+    public LocalTime getStartTime() {
+        return startTime;
+    }
 
-    public boolean overlaps(Meeting other) {
-        return !(endTime.isBefore(other.startTime) || startTime.isAfter(other.endTime));
+    public LocalTime getEndTime() {
+        return endTime;
     }
 }
