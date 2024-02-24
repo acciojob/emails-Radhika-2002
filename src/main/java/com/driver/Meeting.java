@@ -22,5 +22,4 @@ public class Meeting {
     public boolean overlaps(Meeting other) {
         return !(endTime.isBefore(other.startTime) || startTime.isAfter(other.endTime));
     }
-
 }
