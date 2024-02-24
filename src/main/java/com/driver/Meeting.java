@@ -11,14 +11,6 @@ public class Meeting {
         this.endTime = endTime;
     }
 
-    public LocalTime getStartTime() {
-        return startTime;
-    }
-
-    public LocalTime getEndTime() {
-        return endTime;
-    }
-
     public boolean overlaps(Meeting other) {
         return !(endTime.isBefore(other.startTime) || startTime.isAfter(other.endTime));
     }
