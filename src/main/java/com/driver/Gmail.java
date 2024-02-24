@@ -27,6 +27,7 @@ public class Gmail extends Email {
         inbox.removeIf(mail -> mail.getMessage().equals(message));
     }
 
+
     public String findLatestMessage(){
         return inbox.isEmpty() ? null : inbox.get(inbox.size() - 1).getMessage();
     }
